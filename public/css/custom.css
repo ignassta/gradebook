@@ -1,0 +1,29 @@
+.row {
+    margin-top: 20px;
+}
+
+input, select {
+    margin-right: 5px;
+}
+
+
+/*table auto number*/
+table:nth-child(2) {
+counter-reset: rowNumber;
+}
+
+table tr {
+    counter-increment: rowNumber;
+}
+
+table tr td:first-child::after {
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}
+
+/*student grade average view*/
+
+.average {
+    text-align: right;
+}

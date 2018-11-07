@@ -17,7 +17,7 @@ class GradeController extends Controller
         return view('grade', ['student' => $student, 'id' => $id, 'lectures' => $lectures]);
     }
 
-    public function storeGrade(Request $request, $id)
+    public function storeGrade($id)
     {
         $student = Student::find($id);
         $grade = new Grade;
